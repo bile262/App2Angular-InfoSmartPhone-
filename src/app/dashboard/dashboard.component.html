@@ -1,0 +1,13 @@
+<h3>Top Sale</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let p of products" class="col-1-4"
+  routerLink="/products/{{p.id}}">
+    <div class="module product">
+      <h4>{{p.nameproduct}}</h4>
+      <img src="{{p.img}}" height="100px">
+    </div>
+  </a>
+</div>
+
+<app-product-search></app-product-search>
+

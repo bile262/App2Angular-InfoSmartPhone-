@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/products">Products</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>
+<!-- <a routerLink = "pro">Click vào đây để hiển thị New Component</a><br />
+<br />
+<router-outlet></router-outlet><br />
+   <ul>
+    <li *ngFor="let p of products" class="product" (click)="setSelectProduct(p)">
+      ID {{p.id}}  - {{p.nameproduct}}
+      <p><img src={{p.img}} height="100px"/></p>
+    </li>
+   </ul>
+   <div *ngIf="selectedProduct">
+    <p>Có chọn 1 sản phẩm</p>
+    <app-product-detail 
+            [product] = "selectedProduct" 
+            [title]="selectedProduct.nameproduct"
+            (dathangEvent)="notifyMessage($event)">
+      </app-product-detail> -->
+      <!-- <p class="mess"><em *ngIf="msg">{{msg}}</em></p> -->
+   <!-- </div>  -->

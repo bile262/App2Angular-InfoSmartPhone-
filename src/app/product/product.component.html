@@ -1,0 +1,43 @@
+<h2>Các sản phẩm </h2>
+<div>
+  <form>
+  <label>Tên sản phẩm:
+    <input #productName />
+  </label>
+  <label>Link ảnh:
+    <input #productImg />
+  </label>
+  <label>Giá:
+    <input #productPrice />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(productName.value,productImg.value,productPrice.value); 
+  productName.value=''">
+    add
+  </button>
+</form>
+</div>
+  <div>
+  <!-- <ul>
+    <li *ngFor="let p of products" class="product" 
+    [class.selected]="p === selectedProduct"
+    (click)="setSelectProduct(p)">
+      ID {{p.id}}  - {{p.nameproduct| uppercase}}
+      <p><img src={{p.img}} height="100px"/></p>
+        <input [(ngModel)]="p.nameproduct" placeholder="name"/>
+    </li>
+</ul> -->
+<ul>
+  <li *ngFor="let p of products" class="product">
+    <a routerLink="/products/{{p.id}}">
+      ID {{p.id}}  - {{p.nameproduct| uppercase}}
+      <p><img src={{p.img}} height="100px"/></p>
+        <input [(ngModel)]="p.nameproduct" placeholder="name"/>
+    </a>
+    <button class="delete" title="delete hero"
+    (click)="delete(p)">x</button>
+  </li>
+</ul>
+</div>
+<!-- <app-product-detail [product]="selectedProduct"></app-product-detail> -->
+

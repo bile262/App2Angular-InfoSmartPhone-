@@ -1,0 +1,21 @@
+<!-- <h2>{{titlebox}}</h2>
+  {{product.id}} - {{product.nameproduct}}
+  {{product.price}}
+  <button (click)="yeucaudathang()">Đặt hàng</button> -->
+  
+  <div class="product-detail" *ngIf="product">
+    <h2>{{product.nameproduct | uppercase}} Chi tiết sản phẩm</h2>
+    <div><span>id: </span>{{product.id}}</div>
+    <p><img src={{product.img}} height="300px"/></p>
+    <div>
+      <label>
+        <input [(ngModel)]="product.nameproduct" placeholder="name"/>
+      </label>
+      <br>
+      <label>
+        <span>Giá: </span>{{product.price}}
+      </label>
+    </div>
+    <button (click)="goBack()">go back</button>
+    <button (click)="save()">save</button>
+  </div>
